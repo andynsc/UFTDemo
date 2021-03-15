@@ -1,16 +1,14 @@
-﻿'MsgBox "hello"
+﻿' Startup Prequisites
+' Record and Run settings set to open browser
+' Connected to Mobile Center
 
-'AIUtil.SetContext Browser("creationtime:=0")
-'AIUtil("profile").Click
 
 
-'AIUtil.SetContext Browser("creationtime:=0")
 
-'myContext = AIUtil.IsMobileContext()
-'MsgBox myContext
 
-' lump these together for mobile.
+' Identify and determine if it's defined as Desktop or Mobile application
 if datatable.value("device_ostype", dtGlobalSheet) <> "Browser" then
+' Mobile version has extra steps to get to profile button - activate only if it's not a desktop application
 	AIUtil.SetContext Device("micclass:=Device")
 	AIUtil("home").Click
 	wait 3
