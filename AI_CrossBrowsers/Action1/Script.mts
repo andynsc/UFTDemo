@@ -1,5 +1,6 @@
 ﻿' Startup Prequisites
 ' Record and Run settings set to open browser
+' Phone plugged in?
 ' Connected to Mobile Center
 
 
